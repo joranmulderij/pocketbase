@@ -34,6 +34,8 @@ type ServeConfig struct {
 
 	// AllowedOrigins is an optional list of CORS origins (default to "*").
 	AllowedOrigins []string
+
+	TLSOrigins []string
 }
 
 // Serve starts a new app web server.
@@ -77,10 +79,14 @@ func Serve(app core.App, config ServeConfig) (*http.Server, error) {
 
 	mainHost, _, _ := net.SplitHostPort(mainAddr)
 
+	if len(config.TLSOrigins) == 0 {
+		config.TLSOrigins = []string{mainHost, "www." + mainHost}
+	}
+
 	certManager := &autocert.Manager{
 		Prompt:     autocert.AcceptTOS,
 		Cache:      autocert.DirCache(filepath.Join(app.DataDir(), ".autocert_cache")),
-		HostPolicy: autocert.HostWhitelist(mainHost, "www."+mainHost),
+		HostPolicy: autocert.HostWhitelist(config.TLSOrigins...),
 	}
 
 	server := &http.Server{

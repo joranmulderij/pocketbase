@@ -13,6 +13,7 @@ import (
 // starting the default PocketBase web server.
 func NewServeCommand(app core.App, showStartBanner bool) *cobra.Command {
 	var allowedOrigins []string
+	var tlsOrigins []string
 	var httpAddr string
 	var httpsAddr string
 
@@ -25,6 +26,7 @@ func NewServeCommand(app core.App, showStartBanner bool) *cobra.Command {
 				HttpsAddr:       httpsAddr,
 				ShowStartBanner: showStartBanner,
 				AllowedOrigins:  allowedOrigins,
+				TLSOrigins:      tlsOrigins,
 			})
 
 			if err != http.ErrServerClosed {
@@ -38,6 +40,13 @@ func NewServeCommand(app core.App, showStartBanner bool) *cobra.Command {
 		"origins",
 		[]string{"*"},
 		"CORS allowed domain origins list",
+	)
+
+	command.PersistentFlags().StringSliceVar(
+		&tlsOrigins,
+		"tls-origins",
+		[]string{},
+		"TLS allowed domain origins list",
 	)
 
 	command.PersistentFlags().StringVar(
