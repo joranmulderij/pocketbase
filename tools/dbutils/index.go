@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/pocketbase/pocketbase/tools/tokenizer"
+	"github.com/joranmulderij/pocketbase/tools/tokenizer"
 )
 
 var (

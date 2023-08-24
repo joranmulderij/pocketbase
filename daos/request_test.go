@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/joranmulderij/pocketbase/models"
+	"github.com/joranmulderij/pocketbase/tests"
+	"github.com/joranmulderij/pocketbase/tools/types"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/types"
 )
 
 func TestRequestQuery(t *testing.T) {

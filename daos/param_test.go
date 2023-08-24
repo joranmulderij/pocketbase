@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/tests"
-	"github.com/pocketbase/pocketbase/tools/security"
-	"github.com/pocketbase/pocketbase/tools/types"
+	"github.com/joranmulderij/pocketbase/models"
+	"github.com/joranmulderij/pocketbase/tests"
+	"github.com/joranmulderij/pocketbase/tools/security"
+	"github.com/joranmulderij/pocketbase/tools/types"
 )
 
 func TestParamQuery(t *testing.T) {

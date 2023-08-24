@@ -5,10 +5,10 @@ import (
 	"fmt"
 
 	validation "github.com/go-ozzo/ozzo-validation/v4"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/models/settings"
-	"github.com/pocketbase/pocketbase/tools/filesystem"
-	"github.com/pocketbase/pocketbase/tools/security"
+	"github.com/joranmulderij/pocketbase/core"
+	"github.com/joranmulderij/pocketbase/models/settings"
+	"github.com/joranmulderij/pocketbase/tools/filesystem"
+	"github.com/joranmulderij/pocketbase/tools/security"
 )
 
 const (

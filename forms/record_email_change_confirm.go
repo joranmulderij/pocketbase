@@ -2,11 +2,11 @@ package forms
 
 import (
 	validation "github.com/go-ozzo/ozzo-validation/v4"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/daos"
-	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/schema"
-	"github.com/pocketbase/pocketbase/tools/security"
+	"github.com/joranmulderij/pocketbase/core"
+	"github.com/joranmulderij/pocketbase/daos"
+	"github.com/joranmulderij/pocketbase/models"
+	"github.com/joranmulderij/pocketbase/models/schema"
+	"github.com/joranmulderij/pocketbase/tools/security"
 )
 
 // RecordEmailChangeConfirm is an auth record email change confirmation form.

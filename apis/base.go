@@ -12,11 +12,11 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/joranmulderij/pocketbase/core"
+	"github.com/joranmulderij/pocketbase/tools/rest"
+	"github.com/joranmulderij/pocketbase/ui"
 	"github.com/labstack/echo/v5"
 	"github.com/labstack/echo/v5/middleware"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/tools/rest"
-	"github.com/pocketbase/pocketbase/ui"
 	"github.com/spf13/cast"
 )
 

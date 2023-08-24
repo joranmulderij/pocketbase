@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"strings"
 
+	"github.com/joranmulderij/pocketbase/tools/search"
 	"github.com/labstack/echo/v5"
-	"github.com/pocketbase/pocketbase/tools/search"
 )
 
 // Serializer represents custom REST JSON serializer based on echo.DefaultJSONSerializer,

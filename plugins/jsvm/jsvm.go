@@ -25,12 +25,12 @@ import (
 	"github.com/dop251/goja_nodejs/require"
 	"github.com/fatih/color"
 	"github.com/fsnotify/fsnotify"
+	"github.com/joranmulderij/pocketbase/core"
+	m "github.com/joranmulderij/pocketbase/migrations"
+	"github.com/joranmulderij/pocketbase/plugins/jsvm/internal/types/generated"
+	"github.com/joranmulderij/pocketbase/tools/template"
 	"github.com/labstack/echo/v5"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/core"
-	m "github.com/pocketbase/pocketbase/migrations"
-	"github.com/pocketbase/pocketbase/plugins/jsvm/internal/types/generated"
-	"github.com/pocketbase/pocketbase/tools/template"
 )
 
 const (

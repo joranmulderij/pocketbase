@@ -11,12 +11,12 @@ import (
 	"time"
 
 	"github.com/fatih/color"
+	"github.com/joranmulderij/pocketbase/core"
+	"github.com/joranmulderij/pocketbase/migrations"
+	"github.com/joranmulderij/pocketbase/migrations/logs"
+	"github.com/joranmulderij/pocketbase/tools/migrate"
 	"github.com/labstack/echo/v5/middleware"
 	"github.com/pocketbase/dbx"
-	"github.com/pocketbase/pocketbase/core"
-	"github.com/pocketbase/pocketbase/migrations"
-	"github.com/pocketbase/pocketbase/migrations/logs"
-	"github.com/pocketbase/pocketbase/tools/migrate"
 	"golang.org/x/crypto/acme"
 	"golang.org/x/crypto/acme/autocert"
 )
